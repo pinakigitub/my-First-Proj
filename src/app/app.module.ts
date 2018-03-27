@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpServiceService } from './common/http-service.service';
+import { GlobalConstantsServiceService } from './common/global-constants-service.service';
 import { AppComponent } from './app.component';
 
 
@@ -12,9 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpServiceService, GlobalConstantsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

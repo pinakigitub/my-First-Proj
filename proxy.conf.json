@@ -1,0 +1,16 @@
+[
+    {
+        "context": [
+            "/project"
+        ],
+        "target": {
+            "host": "192.168.31.179",
+            "protocol": "http:",
+            "port": 4200
+        },
+        "secure": false,
+        "pathRewrite": {
+            "^/project": "/"
+        }
+    }
+]
